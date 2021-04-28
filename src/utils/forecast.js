@@ -12,7 +12,9 @@ const forescast = (lat, long, callback) => {
         } else {
             const message = "It is currently " + body.current.temperature  + " degress out. " +
                          "It feels like " + body.current.feelslike + " degress out." +
-                         "There is a " + body.current.precip + "% change of rain.";
+                         "There is a " + body.current.precip + "% change of rain." +
+                         "The humidity is " + body.current.humidity + "% and the " +
+                         "wind speed is " + body.current.wind_speed + " KM per hour.";
             callback(undefined, message);
         }
     });
